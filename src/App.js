@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Profile from './profile/Profile';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+ 
+  const fullName='Imèn';
+  const bio = 'chemistry';
+  const profession='Quality Control Technician';
+  const handleName = fullName =>{ alert(`Welcome to ${fullName} profile`);}
 
-export default App;
+const styleObject={color:"red",textAlign:"center"}
+
+  return (
+
+    <div  className="profile" style={styleObject}>
+
+
+<Profile handleName={handleName} fullName={fullName} bio={bio} profession={profession}> <img className="photo" src="/myphoto.jpg" alt="photo"/>
+</Profile>
+
+  </div>
+  );
+  }
+  export default App;
